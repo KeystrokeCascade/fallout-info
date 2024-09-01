@@ -1,0 +1,106 @@
+/* Fonts */
+@font-face {
+	font-family: fallout;
+	src: url(fonts/fallout.ttf);
+}
+@font-face {
+  font-family: overseer;
+  src: url(fonts/overseer.otf);
+}
+
+
+/* General formatting */
+body {
+	font-family: fallout;
+	font-size: 18pt;
+	color: #3CF800;
+	background-color: #040C00;
+	padding-bottom: 200px;
+}
+
+p, h1, h2, table, hr, ul, pre {
+	width: 60%;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1, h2 {
+	font-family: overseer;
+	color: #ECECEC;
+}
+
+p img, h1 img{
+	vertical-align: middle;
+	max-width: 80%;
+}
+
+hr, p img, .screenshot {
+	border: 1px solid #3CF800;
+	border-radius:5px;
+	background: url('./media/fallout-background.jpg');
+}
+
+pre {
+	font-size: 14pt;
+	tab-size: 0;
+	-moz-tab-size: 0;
+	font-weight: 700;
+	line-height: 1;
+}
+
+table, td {
+	border-collapse: collapse;
+	border-bottom: 1px solid #3CF800;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+h1, .center, .navbar {text-align: center;}
+h2 {margin-bottom: 5px;}
+p {margin-top: 0;}
+a {color: inherit;}
+a:hover {color: #FCFC7C;}
+.navbar a {padding: 0 .5em;}
+
+
+/* Cool background things */
+.bak1 {background: url('./media/fallout-scr1.png');}
+.bak2 {background: url('./media/fallout-scr2.png');}
+.bak3 {background: url('./media/fallout2-map.png');}
+.bak4 {background: url('./media/fallout2-broken-dreams.webp');}
+
+.screenshot {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	height: 10em;
+	margin: 1em auto 1em auto;
+	max-width: 2000px;
+}
+
+
+/* Alternate media */
+@media screen and (max-width: 600px) {
+	p, h1, h2, table, hr, ul, pre {
+		width: 90%;
+	}
+}
+
+@media print {
+	p, h1, h2, table, hr, ul, pre {
+		width: 100%;
+		color: #000000;
+	}
+	table, td {
+		border-bottom: 2px solid #000;
+	}
+	p img {
+		border: 1px solid #000;
+		max-width: 50%;
+	}
+	.navbar, .screenshot {
+		display: none;
+	}
+}
